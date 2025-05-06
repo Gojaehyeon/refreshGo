@@ -10,6 +10,8 @@ import SwiftData
 
 @main
 struct reFreshApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
@@ -28,5 +30,20 @@ struct reFreshApp: App {
             ContentView()
         }
         .modelContainer(sharedModelContainer)
+    }
+}
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+    var window: UIWindow?
+
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
+    ) -> Bool {
+        let window = ShakeWindow(frame: UIScreen.main.bounds)
+        window.rootViewController = UIHostingController(rootView: ContentView())
+        window.makeKeyAndVisible()
+        self.window = window
+        return true
     }
 }

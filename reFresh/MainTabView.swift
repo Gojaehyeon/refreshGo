@@ -10,27 +10,19 @@ import SwiftUI
 struct MainTabView: View {
     var body: some View {
         TabView {
-            RefreshView()
-                .tabItem {
-                    Label("Refresh", systemImage: "arrow.triangle.2.circlepath")
-                }
             SpinnerView()
                 .tabItem {
                     Label("Spinner", systemImage: "rotate.3d")
                 }
+            RefreshView()
+                .tabItem {
+                    Label("Refresh", systemImage: "arrow.triangle.2.circlepath")
+                }
             CatRunView()
                 .tabItem {
-                    Label("CatRun", systemImage: "cat.fill")
+                    Label("CatRun", systemImage: "cat")
                 }
         }
-    }
-}
-
-
-struct CatRunView: View {
-    var body: some View {
-        Text("Cat Run Placeholder")
-            .font(.largeTitle)
     }
 }
 

@@ -14,6 +14,8 @@ struct SpinnerView: View {
     @State private var lastUpdate = Date()
     @State private var isTouching = false
     @State private var engine: CHHapticEngine?
+    @State private var spinnerImageIndex: Int = 0
+    let spinnerImages = ["spinner", "spinner2", "spinner3", "spinner4"]
 
     let timer = Timer.publish(every: 1.0 / 60.0, on: .main, in: .common).autoconnect()
 
@@ -21,7 +23,7 @@ struct SpinnerView: View {
         ZStack {
             Color.black.ignoresSafeArea()
 
-            Image("spinner")
+            Image(spinnerImages[spinnerImageIndex])
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 400, height: 400)
@@ -32,6 +34,22 @@ struct SpinnerView: View {
                             spinSpeed += 500
                         }
                 )
+            VStack {
+                Spacer()
+                Button(action: {
+                    spinnerImageIndex = (spinnerImageIndex + 1) % spinnerImages.count
+                }) {
+                    Text("Change Spinner")
+                        .fontWeight(.semibold)
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 10)
+                        .background(Color.white.opacity(0.9))
+                        .foregroundColor(.black)
+                        .cornerRadius(12)
+                        .shadow(radius: 5)
+                }
+                .padding(.bottom, 30)
+            }
         }
         .simultaneousGesture(
             LongPressGesture(minimumDuration: 0.01)
