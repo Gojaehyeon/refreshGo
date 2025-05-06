@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2420ABC92DCA64EC00A0B4E4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2420ABC72DCA64E200A0B4E4 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		2420AB272DC5CF0E00A0B4E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,35 +31,12 @@
 		2420AB142DC5CF0C00A0B4E4 /* reFresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reFresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2420AB262DC5CF0E00A0B4E4 /* reFreshTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reFreshTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2420AB302DC5CF0E00A0B4E4 /* reFreshUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reFreshUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2420ABC72DCA64E200A0B4E4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		2420ABCA2DCA64F300A0B4E4 /* Exceptions for "reFresh" folder in "reFresh" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				READNE.md,
-			);
-			target = 2420AB132DC5CF0C00A0B4E4 /* reFresh */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		2420ABCB2DCA64F300A0B4E4 /* Exceptions for "reFresh" folder in "Compile Sources" phase from "reFresh" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = 2420AB102DC5CF0C00A0B4E4 /* Sources */;
-			membershipExceptions = (
-				READNE.md,
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		2420AB162DC5CF0C00A0B4E4 /* reFresh */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				2420ABCA2DCA64F300A0B4E4 /* Exceptions for "reFresh" folder in "reFresh" target */,
-				2420ABCB2DCA64F300A0B4E4 /* Exceptions for "reFresh" folder in "Compile Sources" phase from "reFresh" target */,
-			);
 			path = reFresh;
 			sourceTree = "<group>";
 		};
@@ -99,6 +80,7 @@
 		2420AB0B2DC5CF0C00A0B4E4 = {
 			isa = PBXGroup;
 			children = (
+				2420ABC72DCA64E200A0B4E4 /* README.md */,
 				2420AB162DC5CF0C00A0B4E4 /* reFresh */,
 				2420AB292DC5CF0E00A0B4E4 /* reFreshTests */,
 				2420AB332DC5CF0E00A0B4E4 /* reFreshUITests */,
@@ -260,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2420ABC92DCA64EC00A0B4E4 /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
