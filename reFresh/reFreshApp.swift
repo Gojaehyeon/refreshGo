@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import GoogleMobileAds
 
 @main
 struct reFreshApp: App {
@@ -40,6 +41,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
+        MobileAds.shared.start()
         let window = ShakeWindow(frame: UIScreen.main.bounds)
         window.rootViewController = UIHostingController(rootView: ContentView())
         window.makeKeyAndVisible()
